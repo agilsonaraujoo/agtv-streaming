@@ -40,7 +40,7 @@ const Pricing = () => {
               ))}
             </ul>
             <button
-              onClick={() => window.open(plan.paymentUrl, '_blank')}
+              onClick={() => window.location.href = plan.paymentUrl}
               className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300 shadow-lg transform hover:scale-105"
             >
               Assinar
