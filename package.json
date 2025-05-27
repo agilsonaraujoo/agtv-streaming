@@ -15,10 +15,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run clean && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "vercel"
+    "deploy": "vercel",
+    "clean": "npm run clean:build",
+    "clean:build": "rm -rf build"
   },
   "eslintConfig": {
     "extends": [
@@ -41,7 +43,6 @@
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
-    "tailwindcss": "^3.4.1",
-    "rimraf": "^6.0.1"
+    "tailwindcss": "^3.4.1"
   }
 }
