@@ -40,10 +40,10 @@ const Pricing = () => {
               ))}
             </ul>
             <button
-              onClick={() => window.open('https://wa.me/5583986913481?text=Ol%C3%A1%2C+quero+assinar+o+plano+${encodeURIComponent(plan.name)}', '_blank')}
+              onClick={() => window.open(plan.paymentUrl, '_blank')}
               className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300 shadow-lg transform hover:scale-105"
             >
-              Fale com WhatsApp
+              Assinar
             </button>
           </div>
         ))}

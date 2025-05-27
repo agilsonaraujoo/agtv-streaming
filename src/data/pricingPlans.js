@@ -12,6 +12,7 @@ export const plans = [
       "Filmes e Séries On Demand",
     ],
     isPopular: false,
+    paymentUrl: "https://loja.infinitepay.io/agtv_streaming/neg6862-agtv-streaming"
   },
   {
     name: "Plano Trimestral",
@@ -26,6 +27,7 @@ export const plans = [
       "Desconto no Valor Total",
     ],
     isPopular: false,
+    paymentUrl: "https://loja.infinitepay.io/agtv_streaming/zwi3030-agtv-plano-mensal"
   },
   {
     name: "Plano Semestral",
@@ -40,6 +42,7 @@ export const plans = [
       "Economia Significativa",
     ],
     isPopular: true,
+    paymentUrl: "https://loja.infinitepay.io/agtv_streaming/vxx2958-agtv-plano-plus"
   },
   {
     name: "Plano Anual",
@@ -55,5 +58,6 @@ export const plans = [
       "Acesso Prioritário a Novidades",
     ],
     isPopular: true,
+    paymentUrl: "https://loja.infinitepay.io/agtv_streaming/wox2479-agtv-plano-anual"
   },
 ];
