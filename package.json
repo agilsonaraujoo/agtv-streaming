@@ -42,13 +42,6 @@
     "routes": [
       { "src": "/(.*)", "dest": "/index.html" }
     ]
-  }
-},
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
