@@ -3,7 +3,7 @@ import React from 'react';
 const SimpleStripeCheckoutButton = ({ plan }) => {
   const handleCheckout = async () => {
     try {
-      const response = await fetch('/api/create-checkout-session', {
+      const response = await fetch('/create-checkout-session', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
