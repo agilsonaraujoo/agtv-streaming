@@ -3,7 +3,7 @@ import React from 'react';
 const SimpleStripeCheckoutButton = ({ plan }) => {
   const handleCheckout = async () => {
     try {
-      const response = await fetch('/create-checkout-session', {
+      const response = await fetch('/api/create-checkout-session', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -17,7 +17,7 @@ const SimpleStripeCheckoutButton = ({ plan }) => {
 
       if (response.ok) {
         const data = await response.json();
-        window.location.href = data.id;
+        window.location.href = data.url;
       } else {
         console.error('Erro ao criar sessão de checkout:', data.error);
       }
