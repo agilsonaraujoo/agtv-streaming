@@ -43,7 +43,7 @@ const FAQ = () => {
                 {index === faqsData.length - 1 && (
                   <div className="mt-4 flex justify-center">
                     <a 
-                      href="https://wa.me/5511999999999" 
+                      href="https://wa.me/5583986913481?text=Ol%C3%A1%2C+quero+uma+avalia%C3%A7%C3%A3o+gratuita" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-full flex items-center justify-center gap-2 transition-colors duration-300"

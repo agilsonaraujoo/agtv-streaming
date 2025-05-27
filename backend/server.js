@@ -29,16 +29,11 @@ app.post('/create-checkout-session', async (req, res) => {
   const { priceId } = req.body;
 
   try {
-    const prices = await stripe.prices.list({
-      lookup_keys: [req.body.lookup_key],
-      expand: ['data.product'],
-    });
-
     const session = await stripe.checkout.sessions.create({
       billing_address_collection: 'auto',
       line_items: [
         {
-          price: prices.data[0].id,
+          price: priceId,
           quantity: 1,
         },
       ],
@@ -51,7 +46,7 @@ app.post('/create-checkout-session', async (req, res) => {
       },
     });
 
-    res.redirect(303, session.url);
+    res.json({ id: session.url });
   } catch (error) {
     console.error('Erro ao criar sessão:', error);
     res.status(500).json({ error: error.message });

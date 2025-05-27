@@ -85,11 +85,16 @@ npm install
      STRIPE_PRICE_ID_ANUAL=id_do_preco_anual
      ```
 3. Adicione as chaves do Stripe no arquivo `.env`:
+   - **ATENÇÃO**: Use apenas chaves de teste durante o desenvolvimento
+   - Para ambiente de produção, use chaves de produção (começam com 'sk_live_')
+   - Exemplo de chaves de teste:
    ```env
-   STRIPE_SECRET_KEY=sua_chave_secreta
-   STRIPE_PUBLIC_KEY=sua_chave_publica
-   WEBHOOK_SECRET=sua_chave_webhook
+   STRIPE_SECRET_KEY=sua_chave_secreta_de_teste
+   STRIPE_PUBLIC_KEY=sua_chave_publica_de_teste
+   WEBHOOK_SECRET=sua_chave_webhook_de_teste
    ```
+
+   **IMPORTANTE**: Nunca compartilhe suas chaves de produção. Mantenha-as seguras e use apenas em ambiente de produção.
 
 ### 5. Configure o TMDB
 
