@@ -41,7 +41,7 @@ const Header = () => {
   // Substitua esta URL pela sua imagem de logo.
   // Se estiver na pasta 'public', use '/nome-da-imagem.jpg'
   // Se importada de 'src/assets', use a variável importada.
-  const logoSrc = "/agtv.jpg"; // Logo AGTV na pasta public
+  const logoSrc = "/AGTV.jpg"; // Logo AGTV na pasta public
 
   return (
     <header className="bg-gray-900 text-white shadow-lg fixed w-full z-50">
