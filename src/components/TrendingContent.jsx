@@ -42,7 +42,7 @@ const TrendingContent = () => {
       lastScrollTimeRef.current = 0;
       scrollAnimationRef.current = requestAnimationFrame(animateScroll);
     }
-  }, []); // Adicionando dependências vazias pois usamos apenas refs
+  }, [animateScroll]); // Adicionando animateScroll como dependência
 
   const stopAutoScroll = () => {
     if (scrollAnimationRef.current) {
