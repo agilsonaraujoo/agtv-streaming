@@ -16,6 +16,7 @@ const SimpleStripeCheckoutButton = ({ plan }) => {
       const data = await response.json();
 
       if (response.ok) {
+        const data = await response.json();
         window.location.href = data.id;
       } else {
         console.error('Erro ao criar sessão de checkout:', data.error);

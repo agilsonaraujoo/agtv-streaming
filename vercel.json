@@ -11,6 +11,7 @@
     }
   ],
   "routes": [
+    { "src": "/api/(.*)", "dest": "backend/server.js" },
     { "src": "/create-checkout-session", "dest": "backend/server.js" },
     { "src": "/create-portal-session", "dest": "backend/server.js" },
     { "src": "/webhook", "dest": "backend/server.js" },

@@ -25,7 +25,7 @@ app.use((err, req, res, next) => {
 app.use(cors());
 
 // Rota para criar sessão de checkout
-app.post('/create-checkout-session', async (req, res) => {
+app.post('/create-checkout-session', cors(), async (req, res) => {
   const { priceId } = req.body;
 
   try {
