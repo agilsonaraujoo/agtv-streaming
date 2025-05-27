@@ -72,13 +72,24 @@ npm install
 ### 4. Configure o Stripe
 
 1. Crie uma conta no Stripe (https://stripe.com)
-2. Crie dois produtos no Dashboard do Stripe:
-   - Plano Semestral
-   - Plano Anual
-3. Para cada produto, crie um preço:
-   - Para o plano semestral: Preço fixo por 6 meses
-   - Para o plano anual: Preço fixo por 12 meses
-4. Copie os IDs dos preços e adicione no `.env`
+2. Acesse o Dashboard do Stripe e:
+   - Crie dois produtos:
+     - Plano Semestral
+     - Plano Anual
+   - Para cada produto, crie um preço:
+     - Para o plano semestral: Preço fixo por 6 meses
+     - Para o plano anual: Preço fixo por 12 meses
+   - Copie os IDs dos preços e adicione no `.env` como:
+     ```env
+     STRIPE_PRICE_ID_SEMESTRAL=id_do_preco_semestral
+     STRIPE_PRICE_ID_ANUAL=id_do_preco_anual
+     ```
+3. Adicione as chaves do Stripe no arquivo `.env`:
+   ```env
+   STRIPE_SECRET_KEY=sua_chave_secreta
+   STRIPE_PUBLIC_KEY=sua_chave_publica
+   WEBHOOK_SECRET=sua_chave_webhook
+   ```
 
 ### 5. Configure o TMDB
 
