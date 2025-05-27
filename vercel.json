@@ -7,11 +7,7 @@
     },
     {
       "src": "next.config.js",
-      "use": "@vercel/next",
-      "config": {
-        "buildCommand": "npm run build",
-        "outputDirectory": "build"
-      }
+      "use": "@vercel/next"
     }
   ],
   "routes": [
