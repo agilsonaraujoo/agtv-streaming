@@ -16,8 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "vercel",
-    "postinstall": "npm run build"
+    "deploy": "vercel"
   },
   "eslintConfig": {
     "extends": [
@@ -32,17 +31,7 @@
       "not op_mini all"
     ]
   },
-  "vercel": {
-    "builds": [
-      {
-        "src": "build/index.html",
-        "use": "@vercel/static-build"
-      }
-    ],
-    "routes": [
-      { "src": "/(.*)", "dest": "/index.html" }
-    ]
-  },
+
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
