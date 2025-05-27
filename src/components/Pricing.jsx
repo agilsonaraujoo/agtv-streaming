@@ -1,7 +1,7 @@
 // src/components/Pricing.jsx
 import React from 'react';
 import { plans } from '../data/pricingPlans'; // Importa os dados dos planos
-import SimpleStripeCheckoutButton from './SimpleStripeCheckoutButton';
+
 
 const Pricing = () => {
   return (
@@ -39,7 +39,12 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
-            <SimpleStripeCheckoutButton plan={plan} />
+            <button
+              onClick={() => window.open('https://wa.me/5583986913481?text=Ol%C3%A1%2C+quero+assinar+o+plano+${encodeURIComponent(plan.name)}', '_blank')}
+              className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300 shadow-lg transform hover:scale-105"
+            >
+              Fale com WhatsApp
+            </button>
           </div>
         ))}
       </div>

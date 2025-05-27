@@ -1,13 +1,13 @@
 # AGTV - Streaming Platform
 
-Plataforma de streaming com assinatura mensal e anual, integrada com o Stripe para processamento de pagamentos.
+Plataforma de streaming com assinatura mensal e anual.
 
 ## 🚀 Tecnologias Utilizadas
 
 - React.js
 - Node.js
 - Express.js
-- Stripe API
+
 - Tailwind CSS
 - React Icons
 - The Movie Database (TMDB) API
@@ -38,19 +38,6 @@ Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
 REACT_APP_TMDB_API_KEY=sua_chave_tmdb
 REACT_APP_GEMINI_API_KEY=sua_chave_gemini
 
-# Backend
-STRIPE_SECRET_KEY=sua_chave_secreta_stripe
-STRIPE_PUBLIC_KEY=sua_chave_publica_stripe
-WEBHOOK_SECRET=sua_chave_webhook_stripe
-
-# IDs dos preços no Stripe
-STRIPE_PRICE_ID_SEMESTRAL=id_do_preco_semestral
-STRIPE_PRICE_ID_ANUAL=id_do_preco_anual
-
-# URLs de retorno
-STRIPE_SUCCESS_URL=http://localhost:3000/success
-STRIPE_CANCEL_URL=http://localhost:3000/cancel
-
 # Porta do servidor
 PORT=5000
 ```
@@ -69,19 +56,7 @@ cd backend
 npm install
 ```
 
-### 4. Configure o Stripe
-
-1. Crie uma conta no Stripe (https://stripe.com)
-2. Acesse o Dashboard do Stripe e:
-   - Crie dois produtos:
-     - Plano Semestral
-     - Plano Anual
-   - Para cada produto, crie um preço:
-     - Para o plano semestral: Preço fixo por 6 meses
-     - Para o plano anual: Preço fixo por 12 meses
-   - Copie os IDs dos preços e adicione no `.env` como:
-     ```env
-     STRIPE_PRICE_ID_SEMESTRAL=id_do_preco_semestral
+### 4. Configure o TMDB
      STRIPE_PRICE_ID_ANUAL=id_do_preco_anual
      ```
 3. Adicione as chaves do Stripe no arquivo `.env`:
