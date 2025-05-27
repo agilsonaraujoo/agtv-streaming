@@ -12,49 +12,7 @@ const TrendingContent = () => {
   const scrollSpeed = 0.1;
   const isInteractingRef = useRef(false);
 
-  const handleScroll = () => {
-    const container = scrollContainerRef.current;
-    const isAtEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 1;
-    const isAtStart = container.scrollLeft <= 0;
 
-    if (isInteractingRef.current) {
-      if (isAtEnd) {
-        container.scrollLeft = 0;
-      } else if (isAtStart) {
-        container.scrollLeft = container.scrollWidth - container.clientWidth;
-      }
-    }
-
-
-  };
-
-  const handleNext = () => {
-    const container = scrollContainerRef.current;
-    const isAtEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 1;
-
-    if (isAtEnd) {
-      container.scrollLeft = 0;
-    } else {
-      container.scrollBy({
-        left: container.clientWidth,
-        behavior: 'smooth',
-      });
-    }
-  };
-
-  const handlePrevious = () => {
-    const container = scrollContainerRef.current;
-    const isAtStart = container.scrollLeft <= 0;
-
-    if (isAtStart) {
-      container.scrollLeft = container.scrollWidth - container.clientWidth;
-    } else {
-      container.scrollBy({
-        left: -container.clientWidth,
-        behavior: 'smooth',
-      });
-    }
-  };
 
   const TMDB_API_KEY = process.env.REACT_APP_TMDB_API_KEY;
 
@@ -78,13 +36,13 @@ const TrendingContent = () => {
     scrollAnimationRef.current = requestAnimationFrame(animateScroll);
   };
 
-  const startAutoScroll = () => {
+  const startAutoScroll = useCallback(() => {
     if (scrollContainerRef.current) {
       stopAutoScroll();
       lastScrollTimeRef.current = 0;
       scrollAnimationRef.current = requestAnimationFrame(animateScroll);
     }
-  };
+  }, []); // Adicionando dependências vazias pois usamos apenas refs
 
   const stopAutoScroll = () => {
     if (scrollAnimationRef.current) {
